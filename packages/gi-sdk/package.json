@@ -22,7 +22,7 @@
     "build": "npm run clean && npm run build:es & npm run build:umd",
     "build:es": "father build",
     "build:umd": "node ../../scripts/build-umd-vite.mjs --path=/packages/gi-sdk",
-    "build:umd:analysis": "node ../../scripts/build-umd-vite.mjs --path=/packages/gi-sdk --analysis",
+    "build:umd:analysis": "node ../../scripts/build-umd-vite.mjs --path=/packages/gi --analysis",
     "clean": "rimraf es esm lib dist",
     "prettier": "prettier --write ./src/**/**/**/*.js",
     "start": "npm run clean && father build --watch",
