@@ -25,15 +25,15 @@ export const getPkg = activeAssets => {
 
 export const deps = {
   React: {
-    url: 'https://gw.alipayobjects.com/os/lib/react-dom/17.0.2/umd/react-dom.production.min.js',
-    name: 'react-dom',
-    version: '17.0.2',
+    url: 'https://gw.alipayobjects.com/os/lib/react/18.3.1/umd/react.production.min.js',
+    name: 'react',
+    version: '18.3.1',
     global: 'React',
   },
   ReactDOM: {
-    url: 'https://gw.alipayobjects.com/os/lib/react-dom/17.0.2/umd/react-dom.production.min.js',
+    url: 'https://gw.alipayobjects.com/os/lib/react-dom/18.3.1/umd/react-dom.production.min.js',
     name: 'react-dom',
-    version: '17.0.2',
+    version: '18.3.1',
     global: 'ReactDOM',
   },
   _: {
