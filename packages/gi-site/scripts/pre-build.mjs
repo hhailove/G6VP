@@ -43,15 +43,15 @@ const depsPackage = [
     name: 'localforage',
   },
   {
-    url: 'https://gw.alipayobjects.com/os/lib/react/17.0.2/umd/react.production.min.js',
-    version: '17.0.2',
+    url: 'https://gw.alipayobjects.com/os/lib/react/18.3.1/umd/react.production.min.js',
+    version: '18.3.1',
     global: 'React',
     name: 'react',
   },
   {
-    url: 'https://gw.alipayobjects.com/os/lib/react-dom/17.0.2/umd/react-dom.production.min.js',
+    url: 'https://gw.alipayobjects.com/os/lib/react-dom/18.3.1/umd/react-dom.production.min.js',
     name: 'react-dom',
-    version: '17.0.2',
+    version: '18.3.1',
     global: 'ReactDOM',
   },
   {
