@@ -3,8 +3,8 @@ import fsExtra from 'fs-extra';
 import fetch from 'node-fetch';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import deps from './deps.json' assert { type: 'json' };
-import deps_assets from './deps_assets.json' assert { type: 'json' };
+import deps from './deps.json' with { type: 'json' };
+import deps_assets from './deps_assets.json' with { type: 'json' };
 
 const __filename = fileURLToPath(import.meta.url);
 

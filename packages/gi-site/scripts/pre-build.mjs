@@ -1,20 +1,20 @@
-import GI_SDK from '@antv/gi-sdk/package.json' assert { type: 'json' };
+import GI_SDK from '@antv/gi-sdk/package.json' with { type: 'json' };
 /** build-in assets */
-import GI_ASSETS_ADVANCE from '@antv/gi-assets-advance/package.json' assert { type: 'json' };
-import GI_ASSETS_ALGORITHM from '@antv/gi-assets-algorithm/package.json' assert { type: 'json' };
-import GI_ASSETS_BASIC from '@antv/gi-assets-basic/package.json' assert { type: 'json' };
-import GI_ASSETS_SCENE from '@antv/gi-assets-scene/package.json' assert { type: 'json' };
+import GI_ASSETS_ADVANCE from '@antv/gi-assets-advance/package.json' with { type: 'json' };
+import GI_ASSETS_ALGORITHM from '@antv/gi-assets-algorithm/package.json' with { type: 'json' };
+import GI_ASSETS_BASIC from '@antv/gi-assets-basic/package.json' with { type: 'json' };
+import GI_ASSETS_SCENE from '@antv/gi-assets-scene/package.json' with { type: 'json' };
 import fs from 'fs';
 /** build-in engine */
-import GI_ASSETS_GALAXYBASE from '@antv/gi-assets-galaxybase/package.json' assert { type: 'json' };
-import GI_ASSETS_GTAPHSCOPE from '@antv/gi-assets-graphscope/package.json' assert { type: 'json' };
-import GI_ASSETS_HUGEGRAPH from '@antv/gi-assets-hugegraph/package.json' assert { type: 'json' };
-import GI_ASSETS_JANUSGRAPH from '@antv/gi-assets-janusgraph/package.json' assert { type: 'json' };
-import GI_ASSETS_NEO4J from '@antv/gi-assets-neo4j/package.json' assert { type: 'json' };
-import GI_ASSETS_TUGRAPH_ANALYTICS from '@antv/gi-assets-tugraph-analytics/package.json' assert { type: 'json' };
-import GI_ASSETS_TUGRAPH from '@antv/gi-assets-tugraph/package.json' assert { type: 'json' };
+import GI_ASSETS_GALAXYBASE from '@antv/gi-assets-galaxybase/package.json' with { type: 'json' };
+import GI_ASSETS_GTAPHSCOPE from '@antv/gi-assets-graphscope/package.json' with { type: 'json' };
+import GI_ASSETS_HUGEGRAPH from '@antv/gi-assets-hugegraph/package.json' with { type: 'json' };
+import GI_ASSETS_JANUSGRAPH from '@antv/gi-assets-janusgraph/package.json' with { type: 'json' };
+import GI_ASSETS_NEO4J from '@antv/gi-assets-neo4j/package.json' with { type: 'json' };
+import GI_ASSETS_TUGRAPH_ANALYTICS from '@antv/gi-assets-tugraph-analytics/package.json' with { type: 'json' };
+import GI_ASSETS_TUGRAPH from '@antv/gi-assets-tugraph/package.json' with { type: 'json' };
 /** inject assets */
-import INJECT from './pre-build-inject.json' assert { type: 'json' };
+import INJECT from './pre-build-inject.json' with { type: 'json' };
 
 import path from 'path';
 export const G6_VERSION = '4.8.14';
@@ -43,15 +43,15 @@ const depsPackage = [
     name: 'localforage',
   },
   {
-    url: 'https://gw.alipayobjects.com/os/lib/react/17.0.2/umd/react.production.min.js',
-    version: '17.0.2',
+    url: 'https://gw.alipayobjects.com/os/lib/react/18.3.1/umd/react.production.min.js',
+    version: '18.3.1',
     global: 'React',
     name: 'react',
   },
   {
-    url: 'https://gw.alipayobjects.com/os/lib/react-dom/17.0.2/umd/react-dom.production.min.js',
+    url: 'https://gw.alipayobjects.com/os/lib/react-dom/18.3.1/umd/react-dom.production.min.js',
     name: 'react-dom',
-    version: '17.0.2',
+    version: '18.3.1',
     global: 'ReactDOM',
   },
   {

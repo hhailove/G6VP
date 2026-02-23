@@ -32,8 +32,8 @@ const EXTRA_CONFIG = isDev
         _: 'lodash',
       },
       scripts: [
-        'https://gw.alipayobjects.com/os/lib/react/17.0.2/umd/react.production.min.js',
-        'https://gw.alipayobjects.com/os/lib/react-dom/17.0.2/umd/react-dom.production.min.js',
+        'https://gw.alipayobjects.com/os/lib/react/18.3.1/umd/react.production.min.js',
+        'https://gw.alipayobjects.com/os/lib/react-dom/18.3.1/umd/react-dom.production.min.js',
         'https://gw.alipayobjects.com/os/lib/lodash/4.17.21/lodash.min.js',
         'https://gw.alipayobjects.com/os/lib/antd/4.24.8/dist/antd.min.js',
         `https://gw.alipayobjects.com/os/lib/antv/g6/${G6_VERSION}/dist/g6.min.js`,
