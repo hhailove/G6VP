@@ -21,8 +21,8 @@
   "scripts": {
     "build": "npm run clean && npm run build:es & npm run build:umd",
     "build:es": "father build",
-    "build:umd": "webpack  --mode production  -c ../../webpack.config.js --env path=/packages/my-custom-server",
-    "build:umd:watch": "webpack  --mode production  -c ../../webpack.config.js --env path=/packages/my-custom-server watch=true",
+    "build:umd": "node ../../scripts/build-umd-vite.mjs --path=/packages/my-custom-server",
+    "build:umd:watch": "node ../../scripts/build-umd-vite.mjs --path=/packages/my-custom-server --watch",
     "clean": "rimraf es esm lib dist",
     "prettier": "prettier --write ./src/**/**/**/*.js",
     "start": "npm run clean && father build --watch",

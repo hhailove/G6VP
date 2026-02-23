@@ -5,8 +5,8 @@
   "types": "dist/types.d.ts",
   "scripts": {
     "build": "jest && father build && npm run build:umd",
-    "build:umd": "jest && webpack -c ./webpack.config.js --mode=development",
-    "build:umd:watch": "jest && webpack -c ./webpack.config.js --mode=development --watch",
+    "build:umd": "jest && node ../../../scripts/build-umd-vite.mjs --path=/packages/gi-cli/templates",
+    "build:umd:watch": "jest && node ../../../scripts/build-umd-vite.mjs --path=/packages/gi-cli/templates --watch",
     "start": "jest && umi dev",
     "serve": "http-server dist -p 9527",
     "test": "jest"
@@ -33,24 +33,20 @@
     "@antv/graphin": "^2.7.27",
     "antd": "4.x",
     "lodash": "^4.17.21",
-    "react": "17.x",
-    "react-dom": "17.x"
+    "react": "18.x",
+    "react-dom": "18.x"
   },
   "devDependencies": {
     "@types/jest": "^28.x",
-    "@types/react": "^17.x",
-    "@types/react-dom": "^17.x",
+    "@types/react": "^18.x",
+    "@types/react-dom": "^18.x",
     "father": "^2.30.23",
     "http-server": "^14.1.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.x",
     "jest-environment-jsdom": "^28.x",
-    "mini-css-extract-plugin": "^2.7.6",
     "ts-jest": "^28.0.8",
-    "ts-loader": "^9.4.2",
     "typescript": "^5.1.6",
-    "umi": "3.x",
-    "webpack": "^5.88.0",
-    "webpack-cli": "^5.0.0"
+    "umi": "3.x"
   }
 }

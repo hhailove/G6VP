@@ -22,8 +22,8 @@
   "scripts": {
     "build": "npm run clean && npm run build:es & npm run build:umd",
     "build:es": "father build",
-    "build:umd": "webpack  --mode production  -c ../../webpack.config.js --env path=/packages/gi-assets-algorithm",
-    "build:umd:analysis": "webpack  --mode production  -c ../../webpack.config.js --env path=/packages/gi-assets-algorithm analysis=true",
+    "build:umd": "node ../../scripts/build-umd-vite.mjs --path=/packages/gi-assets-algorithm",
+    "build:umd:analysis": "node ../../scripts/build-umd-vite.mjs --path=/packages/gi-assets-algorithm --analysis",
     "clean": "rimraf es esm lib dist",
     "docs": "dumi dev",
     "prettier": "prettier --write ./src/**/**/**/*.js",
@@ -51,8 +51,8 @@
     "@ant-design/icons": "^4.7.0",
     "@antv/g2plot": "^2.4.31",
     "@antv/graphin": "^2.7.27",
-    "react": "17.x",
-    "react-dom": "17.x"
+    "react": "18.x",
+    "react-dom": "18.x"
   },
   "publishConfig": {
     "access": "public"

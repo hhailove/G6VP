@@ -185,8 +185,8 @@ export const HTML_HEADER = `
 
 export const HTML_SCRIPTS = `
 <!--- REACT DEPENDENCIES-->
-<script crossorigin src="https://gw.alipayobjects.com/os/lib/react/17.0.2/umd/react.production.min.js"></script>
-<script crossorigin src="https://gw.alipayobjects.com/os/lib/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://gw.alipayobjects.com/os/lib/react/18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://gw.alipayobjects.com/os/lib/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
 <script src="https://gw.alipayobjects.com/os/lib/localforage/1.10.0/dist/localforage.min.js"></script>
 <!--- Antd DEPENDENCIES-->
 <script src="https://gw.alipayobjects.com/os/lib/lodash/4.17.21/lodash.min.js"></script>
@@ -202,5 +202,9 @@ export const HTML_SCRIPTS = `
 
 export const MY_GRAPH_SDK = $i18n.get({
   id: 'gi-site.src.hooks.common.TsIgnoreConstGetcombineservicesLoadercombinedassets',
-  dm: '\n\n//@ts-ignore\nconst {  getCombineServices,loaderCombinedAssets } = window.GISDK.utils;\nconst { GI_SITE_PROJECT_ID } = SERVER_ENGINE_CONTEXT;\n// 设置引擎上下文\nwindow.localStorage.setItem( \'SERVER_ENGINE_CONTEXT\', JSON.stringify(SERVER_ENGINE_CONTEXT));\n\nconst MyGraphApp= (props) => {\n  const [state,setState]= React.useState({\n    isReady:false,\n    assets:null,\n    config:{},\n    services:[]\n  });\n  React.useEffect(()=>{\n    loaderCombinedAssets(GI_ASSETS_PACKAGE).then(res=>{\n      /** 生成服务 */\n      const services = getCombineServices(res.services)\n      setState(preState=>{\n        return {\n          ...preState,\n          isReady:true,\n          assets:res,\n          services,\n          config:GI_PROJECT_CONFIG,\n        }\n      })\n    })\n  },[]);\n  const {assets,isReady,config,services} =state;\n  if(!isReady){\n    return <div>loading...</div>\n  }\n  return (\n    <div>\n      <div style={{ height: "100vh" }}>\n        {/** @ts-ignore */}\n        <window.GISDK.default\n          config={config}\n          assets={assets}\n          services={services}\n        />\n      </div>\n    </div>\n  );\n};\n\n// 因为没有做 external，避免多个版本react冲突，统一从window对象中获取\n\n//@ts-ignore \nwindow.ReactDOM.render(<MyGraphApp />, document.getElementById("root"));\n \n',
+  dm: '\n\n//@ts-ignore\nconst {  getCombineServices,loaderCombinedAssets } = window.GISDK.utils;\nconst { GI_SITE_PROJECT_ID } = SERVER_ENGINE_CONTEXT;\n// 设置引擎上下文\nwindow.localStorage.setItem( \'SERVER_ENGINE_CONTEXT\', JSON.stringify(SERVER_ENGINE_CONTEXT));\n\nconst MyGraphApp= (props) => {\n  const [state,setState]= React.useState({\n    isReady:false,\n    assets:null,\n    config:{},\n    services:[]\n  });\n  React.useEffect(()=>{\n    loaderCombinedAssets(GI_ASSETS_PACKAGE).then(res=>{\n      /** 生成服务 */\n      const services = getCombineServices(res.services)\n      setState(preState=>{\n        return {\n          ...preState,\n          isReady:true,\n          assets:res,\n          services,\n          config:GI_PROJECT_CONFIG,\n        }\n      })\n    })\n  },[]);\n  const {assets,isReady,config,services} =state;\n  if(!isReady){\n    return <div>loading...</div>\n  }\n  return (\n    <div>\n      <div style={{ height: "100vh" }}>\n        {/** @ts-ignore */}\n        <window.GISDK.default\n          config={config}\n          assets={assets}\n          services={services}\n        />\n      </div>\n    </div>\n  );\n};\n\n// 因为没有做 external，避免多个版本react冲突，统一从window对象中获取\n\n//@ts-ignore \nconst container = document.getElementById("root");
+if (container) {
+  const root = window.ReactDOM.createRoot(container);
+  root.render(<MyGraphApp />);
+}\n \n',
 });

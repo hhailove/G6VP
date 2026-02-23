@@ -17,7 +17,7 @@
   "scripts": {
     "build": "npm run clean && npm run build:es & npm run build:umd",
     "build:es": "father build",
-    "build:umd": "webpack  --mode production  -c ../../webpack.config.js --env path=/packages/gi-assets-janusgraph",
+    "build:umd": "node ../../scripts/build-umd-vite.mjs --path=/packages/gi-assets-janusgraph",
     "clean": "rimraf es esm lib dist",
     "demo": "umi dev",
     "demo:build": "umi build",
@@ -35,7 +35,7 @@
     "umi-request": "^1.4.0"
   },
   "peerDependencies": {
-    "react": "17.x"
+    "react": "18.x"
   },
   "publishConfig": {
     "access": "public"
