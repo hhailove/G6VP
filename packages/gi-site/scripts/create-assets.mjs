@@ -2,7 +2,7 @@ import fs from 'fs';
 import fetch from 'node-fetch';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import assets from './deps.json' assert { type: 'json' };
+import assets from './deps.json' with { type: 'json' };
 
 const __filename = fileURLToPath(import.meta.url);
 export const FONT_3381398 = 'font_3381398_i824ocozt7';
