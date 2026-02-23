@@ -141,7 +141,7 @@ const SERVER = [
   files['src/index.tsx'] = {
     content: `
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import GISDK,{utils} from '@antv/gi-sdk';
 import localforage from 'localforage';
 
@@ -192,7 +192,10 @@ const MyGraphApp= () => {
  };
  
  
-ReactDOM.render(<MyGraphApp />, document.getElementById("root"));
+const container = document.getElementById("root");
+if (container) {
+  createRoot(container).render(<MyGraphApp />);
+}
  
  
     `,
@@ -205,8 +208,8 @@ ReactDOM.render(<MyGraphApp />, document.getElementById("root"));
         description: '',
         main: entryFileName,
         dependencies: {
-          react: '17.x',
-          'react-dom': '17.x',
+          react: '18.x',
+          'react-dom': '18.x',
           localforage: '1.10.0',
           antd: ANTD_VERSION,
           '@antv/gi-theme-antd': GI_THEME_ANTD_VERSION,

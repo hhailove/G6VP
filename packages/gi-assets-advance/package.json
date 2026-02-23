@@ -17,8 +17,8 @@
   "scripts": {
     "build": "npm run clean && npm run build:es & npm run build:umd",
     "build:es": "father build",
-    "build:umd": "webpack  --mode production  -c ../../webpack.config.js --env path=/packages/gi-assets-advance",
-    "build:umd:analysis": "webpack  --mode production  -c ../../webpack.config.js --env path=/packages/gi-assets-advance analysis=true",
+    "build:umd": "node ../../scripts/build-umd-vite.mjs --path=/packages/gi-assets-advance",
+    "build:umd:analysis": "node ../../scripts/build-umd-vite.mjs --path=/packages/gi-assets-advance --analysis",
     "clean": "rimraf es esm lib dist",
     "prettier": "prettier --write ./src/**/**/**/*.js",
     "start": "npm run clean && father build --watch",
@@ -60,8 +60,8 @@
   "peerDependencies": {
     "@antv/graphin": "^2.7.27",
     "antd": "4.x",
-    "react": "17.x",
-    "react-dom": "17.x"
+    "react": "18.x",
+    "react-dom": "18.x"
   },
   "publishConfig": {
     "access": "public"
